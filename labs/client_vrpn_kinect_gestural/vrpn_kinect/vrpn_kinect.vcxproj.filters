@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="vrpn_mouse_extended.cpp">
+    <ClCompile Include="vrpn_kinect.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
