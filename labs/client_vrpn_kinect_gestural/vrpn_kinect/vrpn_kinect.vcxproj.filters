@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="vrpn_kinect.cpp">
+    <ClCompile Include="vrpn_kinect_gestural.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
