@@ -30,6 +30,11 @@ Skeleton code
 19 = RIGHT FOOT
 */
 
+/* SFML variables */
+sf::RenderWindow windowR(sf::VideoMode(300, 300), "Right Hand");
+sf::CircleShape shapeR(150.f);
+sf::RenderWindow windowL(sf::VideoMode(300, 300), "Left Hand");
+sf::CircleShape shapeL(150.f);
 /* Past tracker */
 vrpn_TRACKERCB pastTracker[20];
 
@@ -53,60 +58,71 @@ void VRPN_CALLBACK handle_tracker(void* userData, const vrpn_TRACKERCB t)
 	if (pastTracker[t.sensor].pos[0] == pastTracker[t.sensor].pos[1] && pastTracker[t.sensor].pos[1] == pastTracker[t.sensor].pos[2] && pastTracker[t.sensor].pos[2] == 0.0)
 		initSensor(t);
 
-	/* Search for the hand (left or right) */
-	if (t.sensor == 7 || t.sensor == 11)
+	/* Search for the left hand */
+	if (t.sensor == 7)
 	{
-		///* When the hand moves from top to bottom zone */
-		//if (t.pos[1] < pastTracker[t.sensor == 7 ? 6 : 10].pos[1] && handStatus[t.sensor == 7 ? 0 : 1] == true)
-		//{
-		//	cout << (t.sensor == 7 ? "Left" : "Right") << " Hand Down." << endl;
-		//	handStatus[t.sensor == 7 ? 0 : 1] = false;
-		//}
-
-		///* When the hand moves from bottom to top zone */
-		//if (t.pos[1] > pastTracker[t.sensor == 7 ? 6 : 10].pos[1] && handStatus[t.sensor == 7 ? 0 : 1] == false)
-		//{
-		//	cout << (t.sensor == 7 ? "Left" : "Right") << " Hand Up." << endl;
-		//	handStatus[t.sensor == 7 ? 0 : 1] = true;
-		//}
+		/* When the hand moves from top to bottom zone */
+		if (t.pos[1] < pastTracker[5].pos[1])
+		{
+			shapeL.setFillColor(sf::Color::Red);
+		}
+		/* When the hand moves from bottom to top zone */
+		else if (t.pos[1] > pastTracker[5].pos[1])
+		{
+			shapeL.setFillColor(sf::Color::Blue);
+		}
+	}
+	/* Search for the right hand */
+	else if (t.sensor == 11)
+	{
+		/* When the hand moves from top to bottom zone */
+		if (t.pos[1] < pastTracker[9].pos[1])
+		{
+			shapeR.setFillColor(sf::Color::Yellow);
+		}
+		/* When the hand moves from bottom to top zone */
+		else if (t.pos[1] > pastTracker[9].pos[1])
+		{
+			shapeR.setFillColor(sf::Color::Magenta);
+		}
 	}
 	copyPastPosition(t);
 }
 
 int main(int argc, char * argv[]) {
-	////The constructor takes in the name of the device and the network address of the server.
-	//vrpn_Tracker_Remote* vrpnTracker = new vrpn_Tracker_Remote("Tracker0@localhost");
+	//The constructor takes in the name of the device and the network address of the server.
+	vrpn_Tracker_Remote* vrpnTracker = new vrpn_Tracker_Remote("Tracker0@localhost");
 
-	////Registering a callback function
-	//vrpnTracker->register_change_handler(0, handle_tracker);
+	//Registering a callback function
+	vrpnTracker->register_change_handler(0, handle_tracker);
+	
+	shapeR.setFillColor(sf::Color::Green);
+	shapeL.setFillColor(sf::Color::Green);
 
-	///* Create SFML window and configuration */
-	//sf::RenderWindow window(sf::VideoMode(800, 600), "SFML window");
+	windowL.setPosition(sf::Vector2i(200, 300));
+	windowR.setPosition(sf::Vector2i(1300, 300));
 
-	//// To make sure the remote is properly updated
-	//while (1)
-	//{
-	//	vrpnTracker->mainloop();
-	//}
-
-	//return 0;
-
-	sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
-	sf::CircleShape shape(100.f);
-	shape.setFillColor(sf::Color::Green);
-
-	while (window.isOpen())
+	// To make sure the remote is properly updated
+	while (windowR.isOpen() && windowL.isOpen())
 	{
+		vrpnTracker->mainloop();
+		
 		sf::Event event;
-		while (window.pollEvent(event))
+		while (windowR.pollEvent(event) || windowL.pollEvent(event))
 		{
 			if (event.type == sf::Event::Closed)
-				window.close();
+			{
+				windowR.close();
+				windowL.close();
+			}
 		}
 
-		window.clear();
-		window.draw(shape);
-		window.display();
+		windowR.clear();
+		windowL.clear();
+		windowR.draw(shapeR);
+		windowL.draw(shapeL);
+		windowR.display();
+		windowL.display();
 	}
 
 	return 0;
