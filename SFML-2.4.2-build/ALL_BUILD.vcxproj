@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{F8F61C73-D4A7-35BC-9EBD-C4BCC4D293E1}</ProjectGUID>
+    <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Efrei\M2\IRV\SFML-2.4.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Efrei\M2\IRV\SFML-2.4.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Efrei\M2\IRV\SFML-2.4.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Efrei\M2\IRV\SFML-2.4.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Efrei\M2\IRV\SFML-2.4.2\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule D:/Efrei/M2/IRV/SFML-2.4.2/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -HD:/Efrei/M2/IRV/SFML-2.4.2 -BD:/Efrei/M2/IRV/RVRA3D/SFML-2.4.2-build --check-stamp-file D:\Efrei\M2\IRV\RVRA3D\SFML-2.4.2-build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/Efrei/M2/IRV/SFML-2.4.2/CMakeLists.txt;D:\Efrei\M2\IRV\SFML-2.4.2\CMakeLists.txt;D:\Efrei\M2\IRV\RVRA3D\SFML-2.4.2-build\CMakeFiles\3.7.2\CMakeSystem.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\CMakeSystemSpecificInitialize.cmake;D:\Efrei\M2\IRV\RVRA3D\SFML-2.4.2-build\CMakeFiles\3.7.2\CMakeCCompiler.cmake;D:\Efrei\M2\IRV\RVRA3D\SFML-2.4.2-build\CMakeFiles\3.7.2\CMakeCXXCompiler.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\CMakeSystemSpecificInformation.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\CMakeGenericSystem.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\Platform\WindowsPaths.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCInformation.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\CMakeLanguageInformation.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC-C.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC.cmake;D:\Efrei\M2\IRV\RVRA3D\SFML-2.4.2-build\CMakeFiles\3.7.2\CMakeRCCompiler.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\CMakeRCInformation.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCommonLanguageInclude.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCXXInformation.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\CMakeLanguageInformation.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\Compiler\MSVC-CXX.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCommonLanguageInclude.cmake;D:\Efrei\M2\IRV\SFML-2.4.2\cmake\Config.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\CheckTypeSize.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\CheckIncludeFile.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\CheckIncludeFileCXX.cmake;D:\Efrei\M2\IRV\SFML-2.4.2\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\Efrei\M2\IRV\RVRA3D\SFML-2.4.2-build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule D:/Efrei/M2/IRV/SFML-2.4.2/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -HD:/Efrei/M2/IRV/SFML-2.4.2 -BD:/Efrei/M2/IRV/RVRA3D/SFML-2.4.2-build --check-stamp-file D:\Efrei\M2\IRV\RVRA3D\SFML-2.4.2-build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/Efrei/M2/IRV/SFML-2.4.2/CMakeLists.txt;D:\Efrei\M2\IRV\SFML-2.4.2\CMakeLists.txt;D:\Efrei\M2\IRV\RVRA3D\SFML-2.4.2-build\CMakeFiles\3.7.2\CMakeSystem.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\CMakeSystemSpecificInitialize.cmake;D:\Efrei\M2\IRV\RVRA3D\SFML-2.4.2-build\CMakeFiles\3.7.2\CMakeCCompiler.cmake;D:\Efrei\M2\IRV\RVRA3D\SFML-2.4.2-build\CMakeFiles\3.7.2\CMakeCXXCompiler.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\CMakeSystemSpecificInformation.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\CMakeGenericSystem.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\Platform\WindowsPaths.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCInformation.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\CMakeLanguageInformation.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC-C.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC.cmake;D:\Efrei\M2\IRV\RVRA3D\SFML-2.4.2-build\CMakeFiles\3.7.2\CMakeRCCompiler.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\CMakeRCInformation.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCommonLanguageInclude.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCXXInformation.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\CMakeLanguageInformation.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\Compiler\MSVC-CXX.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCommonLanguageInclude.cmake;D:\Efrei\M2\IRV\SFML-2.4.2\cmake\Config.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\CheckTypeSize.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\CheckIncludeFile.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\CheckIncludeFileCXX.cmake;D:\Efrei\M2\IRV\SFML-2.4.2\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\Efrei\M2\IRV\RVRA3D\SFML-2.4.2-build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule D:/Efrei/M2/IRV/SFML-2.4.2/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -HD:/Efrei/M2/IRV/SFML-2.4.2 -BD:/Efrei/M2/IRV/RVRA3D/SFML-2.4.2-build --check-stamp-file D:\Efrei\M2\IRV\RVRA3D\SFML-2.4.2-build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/Efrei/M2/IRV/SFML-2.4.2/CMakeLists.txt;D:\Efrei\M2\IRV\SFML-2.4.2\CMakeLists.txt;D:\Efrei\M2\IRV\RVRA3D\SFML-2.4.2-build\CMakeFiles\3.7.2\CMakeSystem.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\CMakeSystemSpecificInitialize.cmake;D:\Efrei\M2\IRV\RVRA3D\SFML-2.4.2-build\CMakeFiles\3.7.2\CMakeCCompiler.cmake;D:\Efrei\M2\IRV\RVRA3D\SFML-2.4.2-build\CMakeFiles\3.7.2\CMakeCXXCompiler.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\CMakeSystemSpecificInformation.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\CMakeGenericSystem.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\Platform\WindowsPaths.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCInformation.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\CMakeLanguageInformation.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC-C.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC.cmake;D:\Efrei\M2\IRV\RVRA3D\SFML-2.4.2-build\CMakeFiles\3.7.2\CMakeRCCompiler.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\CMakeRCInformation.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCommonLanguageInclude.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCXXInformation.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\CMakeLanguageInformation.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\Compiler\MSVC-CXX.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCommonLanguageInclude.cmake;D:\Efrei\M2\IRV\SFML-2.4.2\cmake\Config.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\CheckTypeSize.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\CheckIncludeFile.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\CheckIncludeFileCXX.cmake;D:\Efrei\M2\IRV\SFML-2.4.2\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\Efrei\M2\IRV\RVRA3D\SFML-2.4.2-build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule D:/Efrei/M2/IRV/SFML-2.4.2/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -HD:/Efrei/M2/IRV/SFML-2.4.2 -BD:/Efrei/M2/IRV/RVRA3D/SFML-2.4.2-build --check-stamp-file D:\Efrei\M2\IRV\RVRA3D\SFML-2.4.2-build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/Efrei/M2/IRV/SFML-2.4.2/CMakeLists.txt;D:\Efrei\M2\IRV\SFML-2.4.2\CMakeLists.txt;D:\Efrei\M2\IRV\RVRA3D\SFML-2.4.2-build\CMakeFiles\3.7.2\CMakeSystem.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\CMakeSystemSpecificInitialize.cmake;D:\Efrei\M2\IRV\RVRA3D\SFML-2.4.2-build\CMakeFiles\3.7.2\CMakeCCompiler.cmake;D:\Efrei\M2\IRV\RVRA3D\SFML-2.4.2-build\CMakeFiles\3.7.2\CMakeCXXCompiler.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\CMakeSystemSpecificInformation.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\CMakeGenericSystem.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\Platform\WindowsPaths.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCInformation.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\CMakeLanguageInformation.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC-C.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC.cmake;D:\Efrei\M2\IRV\RVRA3D\SFML-2.4.2-build\CMakeFiles\3.7.2\CMakeRCCompiler.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\CMakeRCInformation.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCommonLanguageInclude.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCXXInformation.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\CMakeLanguageInformation.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\Compiler\MSVC-CXX.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCommonLanguageInclude.cmake;D:\Efrei\M2\IRV\SFML-2.4.2\cmake\Config.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\CheckTypeSize.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\CheckIncludeFile.cmake;D:\Program Files\CMake\share\cmake-3.7\Modules\CheckIncludeFileCXX.cmake;D:\Efrei\M2\IRV\SFML-2.4.2\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\Efrei\M2\IRV\RVRA3D\SFML-2.4.2-build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:/Efrei/M2/IRV/RVRA3D/SFML-2.4.2-build/ZERO_CHECK.vcxproj">
+      <Project>C2BBCBE6-91BE-307B-82EA-EC1466892C42</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Efrei/M2/IRV/RVRA3D/SFML-2.4.2-build/src/SFML/Audio/sfml-audio.vcxproj">
+      <Project>443162B1-D8C3-36DE-AFDF-A65C2208634F</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Efrei/M2/IRV/RVRA3D/SFML-2.4.2-build/src/SFML/Graphics/sfml-graphics.vcxproj">
+      <Project>B2F466C6-95B7-3418-86CB-3167409F645B</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Efrei/M2/IRV/RVRA3D/SFML-2.4.2-build/src/SFML/Main/sfml-main.vcxproj">
+      <Project>D2B2650A-8ADA-35A7-B154-8119F58605DF</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Efrei/M2/IRV/RVRA3D/SFML-2.4.2-build/src/SFML/Network/sfml-network.vcxproj">
+      <Project>6FAE4503-F5C5-341B-A4A8-E688BABD9C7C</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Efrei/M2/IRV/RVRA3D/SFML-2.4.2-build/src/SFML/System/sfml-system.vcxproj">
+      <Project>6D0D642C-466D-3543-B865-85659A93B30B</Project>
+    </ProjectReference>
+    <ProjectReference Include="D:/Efrei/M2/IRV/RVRA3D/SFML-2.4.2-build/src/SFML/Window/sfml-window.vcxproj">
+      <Project>F1FA0149-34C8-3877-A542-639B381F2702</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

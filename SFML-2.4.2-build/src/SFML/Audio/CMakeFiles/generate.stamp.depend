@@ -1,0 +1,14 @@
+# CMake generation dependency list for this directory.
+D:/Efrei/M2/IRV/SFML-2.4.2/src/SFML/Audio/CMakeLists.txt
+D:/Program Files/CMake/share/cmake-3.7/Modules/FindOpenAL.cmake
+D:/Program Files/CMake/share/cmake-3.7/Modules/FindPackageHandleStandardArgs.cmake
+D:/Program Files/CMake/share/cmake-3.7/Modules/FindPackageMessage.cmake
+D:/Program Files/CMake/share/cmake-3.7/Modules/CMakeParseArguments.cmake
+D:/Efrei/M2/IRV/SFML-2.4.2/cmake/Modules/FindVorbis.cmake
+D:/Program Files/CMake/share/cmake-3.7/Modules/FindPackageHandleStandardArgs.cmake
+D:/Program Files/CMake/share/cmake-3.7/Modules/FindPackageMessage.cmake
+D:/Program Files/CMake/share/cmake-3.7/Modules/CMakeParseArguments.cmake
+D:/Efrei/M2/IRV/SFML-2.4.2/cmake/Modules/FindFLAC.cmake
+D:/Program Files/CMake/share/cmake-3.7/Modules/FindPackageHandleStandardArgs.cmake
+D:/Program Files/CMake/share/cmake-3.7/Modules/FindPackageMessage.cmake
+D:/Program Files/CMake/share/cmake-3.7/Modules/CMakeParseArguments.cmake
