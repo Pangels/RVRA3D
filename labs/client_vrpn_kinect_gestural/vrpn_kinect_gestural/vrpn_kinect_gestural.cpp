@@ -126,14 +126,14 @@ void VRPN_CALLBACK handle_tracker(void* userData, const vrpn_TRACKERCB t)
 
 		/* mouse left click */
 		/* While left hand is higher than the spine, mouse hold click */
-		if (t.pos[1] > pastTracker[2].pos[1] && input[0].mi.dwFlags != MOUSEEVENTF_LEFTDOWN)
+		if (t.pos[1] > pastTracker[1].pos[1] && input[0].mi.dwFlags != MOUSEEVENTF_LEFTDOWN)
 		{
 			input[0].type = INPUT_MOUSE;
 			input[0].mi.dwFlags = MOUSEEVENTF_LEFTDOWN;
 			SendInput(1, input, sizeof(INPUT));
 		}
 		/* Free the mouse button status when lower than the spine */
-		else if (t.pos[1] < pastTracker[2].pos[1] && input[0].mi.dwFlags == MOUSEEVENTF_LEFTDOWN)
+		else if (t.pos[1] < pastTracker[1].pos[1] && input[0].mi.dwFlags == MOUSEEVENTF_LEFTDOWN)
 		{
 			input[0].type = INPUT_MOUSE;
 			input[0].mi.dwFlags = MOUSEEVENTF_LEFTUP;

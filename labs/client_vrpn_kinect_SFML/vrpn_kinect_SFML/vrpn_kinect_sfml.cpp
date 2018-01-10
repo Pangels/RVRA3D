@@ -85,6 +85,12 @@ void VRPN_CALLBACK handle_tracker(void* userData, const vrpn_TRACKERCB t)
 		{
 			shapeR.setFillColor(sf::Color::Magenta);
 		}
+		/* Close the SFML windows and terminate the program */
+		if (((pastTracker[7].pos[0] > t.pos[0]) && (pastTracker[7].pos[0] - t.pos[0]) > 1.20)
+			|| ((pastTracker[7].pos[0] < t.pos[0]) && (t.pos[0] - pastTracker[7].pos[0]) > 1.20))
+		{
+			windowL.close();
+		}
 	}
 	copyPastPosition(t);
 }
@@ -110,7 +116,7 @@ int main(int argc, char * argv[]) {
 		sf::Event event;
 		while (windowR.pollEvent(event) || windowL.pollEvent(event))
 		{
-			if (event.type == sf::Event::Closed)
+			if (event.type == sf::Event::Closed || GetAsyncKeyState(VK_ESCAPE))
 			{
 				windowR.close();
 				windowL.close();
