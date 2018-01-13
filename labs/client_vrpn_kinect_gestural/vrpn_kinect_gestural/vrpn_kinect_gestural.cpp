@@ -110,7 +110,7 @@ void VRPN_CALLBACK handle_tracker(void* userData, const vrpn_TRACKERCB t)
 	{
 		/* mouse right click*/
 		/* While left hand is on the left of the left shoulder, mouse hold click */
-		if (t.pos[0] + 0.50 < pastTracker[4].pos[0] && input[0].mi.dwFlags == MOUSEEVENTF_LEFTUP)
+		if (t.pos[0] + 0.5 < pastTracker[4].pos[0] && input[0].mi.dwFlags == MOUSEEVENTF_LEFTUP)
 		{
 			input[0].type = INPUT_MOUSE;
 			input[0].mi.dwFlags = MOUSEEVENTF_RIGHTDOWN;
